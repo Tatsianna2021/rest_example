@@ -1,5 +1,14 @@
 package by.webteh.misevich.rest_example.controllerc;
 
+import by.webteh.misevich.rest_example.model.Client;
+import by.webteh.misevich.rest_example.service.ClientService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
 @RestController
 public class ClientController {
 
@@ -18,7 +27,7 @@ public class ClientController {
 
     @GetMapping(value = "/clients")
     public ResponseEntity<List<Client>> read() {
-        final List<client> clients = clientService.readAll();
+        final List<Client> clients = clientService.readAll();
 
         return clients != null &&  !clients.isEmpty()
                 ? new ResponseEntity<>(clients, HttpStatus.OK)

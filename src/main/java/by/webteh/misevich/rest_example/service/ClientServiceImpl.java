@@ -1,4 +1,14 @@
 package by.webteh.misevich.rest_example.service;
+
+import by.webteh.misevich.rest_example.model.Client;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
+
 @Service
 public class ClientServiceImpl implements ClientService {
 

@@ -1,5 +1,9 @@
 package by.webteh.misevich.rest_example.service;
 
+import by.webteh.misevich.rest_example.model.Client;
+
+import java.util.List;
+
 public interface ClientService {
 
     /**
@@ -12,7 +16,7 @@ public interface ClientService {
      * Возвращает список всех имеющихся клиентов
      * @return список клиентов
      */
-    List<client> readAll();
+    List<Client> readAll();
 
     /**
      * Возвращает клиента по его ID
